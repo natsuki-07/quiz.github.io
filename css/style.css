@@ -1,0 +1,210 @@
+header {
+  background: #f5e946;
+  padding: 30px;
+  font-size: 40px;
+}
+
+#intro {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 100px;
+}
+
+#world {
+  background: #d73574;
+}
+
+#jump {
+  background: #35d774;
+}
+
+#rock {
+  background: #7435d7;
+}
+
+.quizlist_box {
+  margin: 30px auto;
+}
+
+.quizlist_box p {
+  font-weight: bold;
+  text-align: center;
+  margin: 0 50px 40px;
+}
+
+.quizlist_box #quizlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.quizlist_box #quizlist li {
+  list-style: none;
+  margin: 10px 100px;
+}
+
+.quizlist_box #quizlist li button {
+  padding: 3px 5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  outline: 0;
+}
+
+#quizbox {
+  width: 70%;
+  margin: 100px auto;
+  position: relative;
+  border: 1px solid #333;
+  padding: 50px 10px 80px;
+}
+
+#quizbox #question {
+  font-size: 30px;
+  padding: 10px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+#quizbox li {
+  padding: 10px 30px;
+  margin: 5px 0;
+  font-size: 25px;
+  text-decoration: underline;
+  border-radius: 4px;
+  text-decoration-color: #d77435;
+  cursor: pointer;
+}
+
+#quizbox .currect {
+  background: rgba(111, 250, 18, 0.8);
+  font-weight: bolder;
+}
+
+#quizbox .wrong {
+  background: rgba(253, 41, 26, 0.8);
+  font-weight: bolder;
+}
+
+#quizbox button {
+  padding: 5px 10px;
+  font-weight: bold;
+  position: absolute;
+  right: 50%;
+  background: #fffb1c;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 5px #b6b315;
+  cursor: pointer;
+  outline: 0;
+}
+
+#quizbox button:active {
+  box-shadow: none;
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+
+#scorebox {
+  margin: 50px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+#scorebox p {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+#scorebox .retry {
+  padding: 5px 10px;
+  background: #48c5f7;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px #1e5368;
+  outline: 0;
+}
+
+#scorebox .retry:active {
+  box-shadow: none;
+  margin-top: 4px;
+  margin-bottom: -4px;
+}
+
+#scorebox .retry a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer {
+  background: #925c52;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+footer .when {
+  padding: 10px 30px;
+  text-align: right;
+}
+
+footer .copyright {
+  text-align: center;
+}
+
+#maru {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  content: "";
+  border: 5px solid rgba(253, 41, 26, 0.8);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.batubox {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+.batubox #batu {
+  margin: 0 auto;
+  content: "";
+  position: relative;
+}
+
+.batubox #batu span:before, .batubox #batu span:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.batubox #batu span:before {
+  border: 5px solid rgba(38, 147, 248, 0.8);
+  background: rgba(38, 147, 248, 0.8);
+  width: 200px;
+  transform: rotate(45deg);
+}
+
+.batubox #batu span:after {
+  border: 5px solid rgba(38, 147, 248, 0.8);
+  background: rgba(38, 147, 248, 0.8);
+  width: 200px;
+  transform: rotate(-45deg);
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

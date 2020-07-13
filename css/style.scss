@@ -1,0 +1,194 @@
+header{
+  background: rgb(245, 233, 70);
+  padding: 30px;
+  font-size: 40px;
+}
+
+#intro{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 100px;
+}
+
+$result1:random(255);
+$result2:random(255);
+$result3:random(255);
+
+//ボタンの色
+#world{
+  background: rgb($result1,$result2,$result3);
+}
+#jump{
+  background: rgb($result2,$result1,$result3);
+}
+#rock{
+  background: rgb($result3,$result2,$result1);
+}
+.quizlist_box{
+  margin: 30px auto;
+  p{
+    font-weight: bold;
+    text-align: center;
+    margin:0 50px 40px;
+  }
+  #quizlist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+   li{
+    list-style: none;
+    margin:10px 100px;
+     button{
+      padding: 3px 5px;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      outline: 0;
+     }
+   }
+  }
+}
+
+#quizbox{
+  width: 70%;
+  margin: 100px auto; 
+  position: relative;
+  border: 1px solid #333;
+  padding: 50px 10px 80px;
+  #question{
+    font-size: 30px;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  li{
+    padding: 10px 30px;
+    margin: 5px 0;
+    font-size: 25px;
+    text-decoration: underline;
+    border-radius: 4px;
+    text-decoration-color: rgb($result1, $result3, $result2);
+    cursor: pointer;
+  }
+  .currect{
+   background: rgba(111, 250, 18,0.8);
+  font-weight: bolder;
+  }
+  .wrong{
+    background: rgba(253, 41, 26,0.8);
+    font-weight: bolder;
+  }
+  button{
+    padding: 5px 10px;
+    font-weight: bold;
+    position: absolute;
+    right: 50%;
+    background: rgb(255, 251, 28);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 5px rgb(182, 179, 21);
+    cursor: pointer;
+    outline: 0;
+    &:active{
+      box-shadow: none;
+      margin-top: 5px;
+      margin-bottom: -5px;
+    }
+  }
+ 
+}
+
+#scorebox{
+  margin: 50px auto;
+  text-align: center;
+  font-weight: bold;
+  p{
+    font-size: 30px;
+    margin-bottom:30px;
+  }
+  .retry{
+    padding: 5px 10px;
+    background: rgb(72, 197, 247);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px rgb(30, 83, 104);
+    outline: 0;
+    &:active{
+      box-shadow: none;
+      margin-top: 4px;
+      margin-bottom: -4px;
+    }
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}
+
+
+footer{
+  background: rgb(146, 92, 82);
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .when{
+    padding: 10px 30px;
+    text-align: right;
+  }
+  .copyright{
+    text-align: center;
+  }
+}
+
+#maru{
+ position: absolute;
+ top: 30%;
+ left: 30%;
+  content: "";
+  border: 5px solid  rgba(253, 41, 26,0.8);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.batubox{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+#batu{
+  margin: 0 auto;
+  content: "";  
+  position: relative;
+  span{
+
+    &:before,&:after{
+    	display: block;
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 30%;
+    }
+    &:before{
+      border: 5px solid  rgba(38, 147, 248, 0.8);
+      background: rgba(38, 147, 248, 0.8);
+      width: 200px;
+     transform: rotate(45deg);
+    }
+    &:after{
+      border: 5px solid  rgba(38, 147, 248, 0.8);
+      background: rgba(38, 147, 248, 0.8);
+      width: 200px;
+      transform: rotate(-45deg);
+      }
+    }
+  }
+}
+.hide{
+  display: none;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Quiz</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Let's Quiz</h1>
+  </header>
+  <div id="intro">
+    <p>クイズにチャレンジ！<br>
+    何問解けるかな？</p>
+  </div>
+
+  <div class="quizlist_box">
+    <p id="genre">ジャンルを選択！</p>
+    <ul id="quizlist">
+      <li><button id="world">世界のいろいろ</button></li>
+      <li><button id="jump">少年ジャンプ</button></li>
+      <li><button id="rock">邦ロック</button></li>
+    </ul>
+  </div>
+
+  <section id="quizbox">
+    <p id="question"></p>
+    <ul id="choices">
+      
+    </ul>
+    <div class="hide" id="maru"><span></span></div>
+
+    <div class="batubox">
+      <div class="hide" id="batu"><span></span></div>
+    </div>
+    <button class="next">次の問題へ</button>
+  </section>
+
+  <section class="hide" id="scorebox">
+    <div class="score_text">
+      <p>あなたのスコア: <span id="score">5問中3問正解</span></p>
+    </div>
+    <button class="retry"><a href="">再挑戦</a></button>
+  </section>
+
+  <footer>
+    <p class="when">*問題は2020年7月に作成したものです。</p>
+    <p class="copyright">copy right@natsuki.s</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
