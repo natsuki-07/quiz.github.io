@@ -4,6 +4,12 @@ header {
   font-size: 40px;
 }
 
+@media screen and (max-width: 400px) {
+  header {
+    font-size: 20px;
+  }
+}
+
 #intro {
   text-align: center;
   font-weight: bold;
@@ -11,16 +17,23 @@ header {
   margin-top: 100px;
 }
 
+@media screen and (max-width: 400px) {
+  #intro {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+}
+
 #world {
-  background: #d73574;
+  background: #83f347;
 }
 
 #jump {
-  background: #35d774;
+  background: #f38347;
 }
 
 #rock {
-  background: #7435d7;
+  background: #47f383;
 }
 
 .quizlist_box {
@@ -48,6 +61,7 @@ header {
 
 .quizlist_box #quizlist li button {
   padding: 3px 5px;
+  width: 200px;
   font-weight: bold;
   border: none;
   border-radius: 4px;
@@ -62,11 +76,30 @@ header {
   padding: 50px 10px 80px;
 }
 
+@media screen and (max-width: 400px) {
+  #quizbox {
+    padding: 20px 0 30px;
+    margin: 40px auto;
+  }
+}
+
 #quizbox #question {
   font-size: 30px;
   padding: 10px 0;
   font-weight: bold;
   text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  #quizbox #question {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #quizbox #choices {
+    margin: 0;
+  }
 }
 
 #quizbox li {
@@ -75,8 +108,19 @@ header {
   font-size: 25px;
   text-decoration: underline;
   border-radius: 4px;
-  text-decoration-color: #d77435;
+  text-decoration-color: #8347f3;
   cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  #quizbox li {
+    font-size: 14px;
+    margin: 0;
+    padding: 8px;
+  }
+  #quizbox li:last-child {
+    margin-bottom: 15px;
+  }
 }
 
 #quizbox .currect {
@@ -102,6 +146,14 @@ header {
   outline: 0;
 }
 
+@media screen and (max-width: 400px) {
+  #quizbox button {
+    padding: 3px 5px;
+    font-size: 5px;
+    right: 10%;
+  }
+}
+
 #quizbox button:active {
   box-shadow: none;
   margin-top: 5px;
@@ -117,6 +169,12 @@ header {
 #scorebox p {
   font-size: 30px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 400px) {
+  #scorebox p {
+    font-size: 20px;
+  }
 }
 
 #scorebox .retry {
@@ -150,9 +208,22 @@ footer {
   justify-content: flex-end;
 }
 
+@media screen and (max-width: 400px) {
+  footer {
+    font-size: 8px;
+    padding: 20px 0 3px;
+  }
+}
+
 footer .when {
   padding: 10px 30px;
-  text-align: right;
+  text-align: left;
+}
+
+@media screen and (max-width: 400px) {
+  footer .when {
+    padding: 3px 10px;
+  }
 }
 
 footer .copyright {
@@ -168,12 +239,28 @@ footer .copyright {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  z-index: 10;
+}
+
+@media screen and (max-width: 400px) {
+  #maru {
+    left: 20%;
+    top: 25%;
+    height: 150px;
+    width: 150px;
+  }
 }
 
 .batubox {
   position: absolute;
   top: 50%;
   left: 30%;
+}
+
+@media screen and (max-width: 400px) {
+  .batubox {
+    left: 10%;
+  }
 }
 
 .batubox #batu {
