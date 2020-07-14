@@ -1,4 +1,8 @@
 @import "media";
+body{
+  // font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
 
 header{
   background: rgb(245, 233, 70);
@@ -105,11 +109,19 @@ $result3:random(255);
   }
   .currect{
    background: rgba(111, 250, 18,0.8);
+   margin-right: 50px;
   font-weight: bolder;
+  @include mq(sm) { 
+    margin-right: 0;
+    }
   }
   .wrong{
     background: rgba(253, 41, 26,0.8);
     font-weight: bolder;
+    margin-right: 50px;
+    @include mq(sm) { 
+    margin-right: 0;
+    }
   }
   button{
     padding: 5px 10px;

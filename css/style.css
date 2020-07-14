@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 header {
   background: #f5e946;
   padding: 30px;
@@ -25,15 +29,15 @@ header {
 }
 
 #world {
-  background: #83f347;
+  background: #80675a;
 }
 
 #jump {
-  background: #f38347;
+  background: #67805a;
 }
 
 #rock {
-  background: #47f383;
+  background: #5a6780;
 }
 
 .quizlist_box {
@@ -108,7 +112,7 @@ header {
   font-size: 25px;
   text-decoration: underline;
   border-radius: 4px;
-  text-decoration-color: #8347f3;
+  text-decoration-color: #805a67;
   cursor: pointer;
 }
 
@@ -125,12 +129,26 @@ header {
 
 #quizbox .currect {
   background: rgba(111, 250, 18, 0.8);
+  margin-right: 50px;
   font-weight: bolder;
+}
+
+@media screen and (max-width: 400px) {
+  #quizbox .currect {
+    margin-right: 0;
+  }
 }
 
 #quizbox .wrong {
   background: rgba(253, 41, 26, 0.8);
   font-weight: bolder;
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 400px) {
+  #quizbox .wrong {
+    margin-right: 0;
+  }
 }
 
 #quizbox button {
