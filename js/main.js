@@ -14,70 +14,31 @@
   const rock = document.getElementById('rock');
   const genre_text = document.getElementById('genre');
 
-  
-  //クイズリスト
-  let quiz_list_world = [
-    {q:'カナダの首都はどこでしょう？', c:['オタワ','トロント','バンクーバー']},
-   {q:'チェコ共和国の通貨は？', c:['コルナ','コロナ','チェコドル']},
-   {q:'Facebookの創業者は？', c:['マーク・ザッカーバーグ','ビル・ゲイツ','マット・マレンウェッグ']},
-   {q:'オーストラリアの首都は？',   c:['キャンベラ','シドニー','メルボルン']},
-   {q:'世界で2番目に面積の大きい国は？',   c:['カナダ','アメリカ','ブラジル']},
-   {q:'2019年にNBAで初優勝したチームは？',   c:['ラプターズ','レイカーズ','ウィザーズ']},
-   {q:'自由の女神は左手に何を持っている？',   c:['独立宣言書','合衆国憲法','奴隷解放宣言']},
-   {q:'世界一平均寿命が長い国は日本です。では世界で2番目に平均寿命が長い国はどこ？',   c:['スイス','ドイツ','アイスランド']},
-   {q:'アメリカの初代大統領は誰？',   c:['ジョージ・ワシントン','エイブラハム・リンカーン','フランクリン・ルーズベルト']},
-  ];
-
-  let quiz_list_jump = [
-    {q:'鬼滅の刃 柱の人数は何人？', c:['9','8','10']},
-    {q:'アイシールド21　泥門デビルバッツが一番最初に勝ったチームはどこ？', c:['恋ヶ浜キューピット','賊学カメレオンズ','王城ホワイトナイツ']},
-    {q:'REBORN 白蘭と真6弔花がしているリングは？', c:['マーレリング','シモンリング','ヴァリアーリング']},
-    {q:'ドラゴンボール 亀仙人の戦闘力は？', c:['139','80','250']},
-    {q:'HUNTER×HUNTER ヒソカの頬のペイントで左側にあるのは何のマーク？', c:['ほし','ハート','なみだ']},
-    {q:'バクマン 真城の好きな漫画は？', c:['あしたのジョー','ドラゴンボール','魁!!男塾']},
-    {q:'ワンピース ワポルが食した悪魔のみは？', c:['バクバクの実','モグモグの実','ショクショクの実']},
-    {q:'ワンピース 白髭海賊団の3番隊隊長は誰？', c:['ジョズ','サッチ','ビスタ']},
-    {q:'NARUTO うちはイタチを殺すことを目的とした、サスケ、重吾、水月、カリンの小隊の名前は？', c:['蛇','暁','鷹']},
-  ];
-
-  let quiz_list_rock = [
-    {q:'RADWIMPSの盟友であり、RADWIMPSの覆面バンドとも言われるバンドグループの名前は？', c:['味噌汁\'s','にっぽんぽん','ジェニファー山口さん']},
-    {q:'名古屋出身のバンドで4月にYONFESを主催するバンドの名前は？', c:['04limited sazabys','スキマスイッチ','SPYAIR']},
-    {q:'静岡県の清水区で行われる静岡を代表する野外フェスはなに？', c:['マグロック','フジロック','お茶ロック']},
-    {q:'SIMが主催するフェスは？', c:['DEAD POP FESTIVAL','AIR JAM','ポルノ超特急']},
-    {q:'[ALEXANDROS]のボーカルはどこの国の帰国子女？', c:['シリア','フィリピン','トルコ']},
-    {q:'RADWIMPSのベースはだれ？', c:['武田祐介','桑原彰','山口智史']},
-    {q:'MAN WITH A MISSIONのメンバーで唯一言葉がしゃべれるのは誰？', c:['ジャンケン・ジョニー','カミカゼ・ボーイ','スペア・リブ']},
-    {q:'細美武士が一番最後に結成したバンドは？', c:['MONOEYES','ELLEGARDEN','the HIATUS']},
-    {q:'マキシマムザホルモンのフェスの定番曲は？', c:['恋のスペルマ','「F」','恋のメガラバ']},
-  ];
-  
-
+  //クイズジャンル選択
   function quizSelect(){
-  world.addEventListener('click',()=>{
-   quiz_set = quiz_list_world;
-   world.disabled = true;
-   rock.disabled = false;
-   jump.disabled = false;
-   make_quiz();
-  });
-  jump.addEventListener('click',()=>{
-   quiz_set = quiz_list_jump;
-   jump.disabled = true;
-   world.disabled = false;
-   rock.disabled = false;
-   make_quiz();
-  });
-  rock.addEventListener('click',()=>{
-   quiz_set = quiz_list_rock;
-   jump.disabled = false;
-   world.disabled = false;
-   rock.disabled = true;
-   make_quiz();
+    world.addEventListener('click',()=>{
+     quiz_set = quiz_list_world;
+     world.disabled = true;
+     rock.disabled = false;
+     jump.disabled = false;
+     make_quiz();
     });
-  }
-
-  quizSelect();
+    jump.addEventListener('click',()=>{
+     quiz_set = quiz_list_jump;
+     jump.disabled = true;
+     world.disabled = false;
+     rock.disabled = false;
+     make_quiz();
+    });
+    rock.addEventListener('click',()=>{
+     quiz_set = quiz_list_rock;
+     jump.disabled = false;
+     world.disabled = false;
+     rock.disabled = true;
+     make_quiz();
+      });
+    }
+    quizSelect();
 
   let quiz_lists = [quiz_list_jump,quiz_list_world,quiz_list_rock];
  
